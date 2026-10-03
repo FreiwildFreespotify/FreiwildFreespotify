@@ -1,0 +1,122 @@
+/* ==========================================================================
+   Freiwild Spotify modded - user.css
+   Dark + purple design language
+   ========================================================================== */
+
+/* ---------- Global / Fonts & rounding ---------- */
+:root {
+  --freiwild-accent: #8b5cf6;
+  --freiwild-accent-2: #a78bfa;
+  --freiwild-glow: rgba(139, 92, 246, 0.35);
+}
+
+/* Softer, rounded corners across the UI */
+.main-card-card,
+.main-card-Card,
+.main-trackList-trackListRow,
+.main-rootlist-rootlistItemWrapper {
+  border-radius: 8px;
+}
+
+/* ---------- Sidebar ---------- */
+.navBar-navBar,
+.navBar-navBarAcessibility {
+  background: linear-gradient(180deg, #0d0b13 0%, #12101a 100%) !important;
+}
+
+/* Active sidebar item gets a purple glow */
+.main-navBar-navBarItem[data-active="true"] a,
+.main-navBar-navBarLinkActive {
+  background: linear-gradient(90deg, rgba(139, 92, 246, 0.25), transparent) !important;
+  border-left: 3px solid var(--freiwild-accent) !important;
+}
+
+/* ---------- Top bar ---------- */
+.main-topBar-background {
+  background: linear-gradient(180deg, #16121f 0%, #12101a 100%) !important;
+}
+
+/* ---------- Playbar: purple gradient ---------- */
+.main-playBar-background,
+.Root-now-playing-bar {
+  background: linear-gradient(90deg, #16121f 0%, #1e1730 55%, #2a2144 100%) !important;
+  border-top: 1px solid rgba(139, 92, 246, 0.35) !important;
+}
+
+/* Progress bar + volume: purple */
+.progressBar-barFilled,
+.progressBar-barBackground + div,
+.x-progressBar-fillColor {
+  background-color: var(--freiwild-accent) !important;
+}
+
+/* Play button: purple with subtle glow on hover */
+.play-pause-button,
+.Button.Button--large.PlayButton {
+  color: #ffffff !important;
+  background-color: transparent !important;
+  transition: transform 0.15s ease, filter 0.15s ease;
+}
+
+.play-pause-button:hover,
+.Button.Button--large.PlayButton:hover {
+  filter: drop-shadow(0 0 12px var(--freiwild-glow));
+  transform: scale(1.06);
+}
+
+/* ---------- Cards / covers: glow instead of hard shadow */
+.main-card-card:hover,
+.main-card-Card:hover {
+  box-shadow: 0 6px 24px var(--freiwild-glow) !important;
+}
+
+/* ---------- Scrollbars ---------- */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #3d3754;
+  border-radius: 10px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--freiwild-accent);
+  background-clip: content-box;
+}
+
+/* ---------- Liked / heart button ---------- */
+[data-testid="heart-button"] svg,
+.heart-button {
+  color: var(--freiwild-accent-2) !important;
+}
+
+/* ---------- Focus ring in brand color ---------- */
+button:focus-visible,
+a:focus-visible,
+[role="button"]:focus-visible {
+  outline-color: var(--freiwild-accent) !important;
+}
+
+/* ---------- Context menus: purple highlight ---------- */
+.genericMenu-menuItem:hover,
+.main-contextMenu-menuItem:hover {
+  background: rgba(139, 92, 246, 0.28) !important;
+}
+
+/* ---------- Subtle brand badge in the top bar ---------- */
+.main-topBar-topbar::after {
+  content: "Freiwild modded";
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--freiwild-accent-2);
+  opacity: 0.85;
+  margin-left: 14px;
+  pointer-events: none;
+}

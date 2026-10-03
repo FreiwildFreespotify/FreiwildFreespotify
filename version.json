@@ -1,0 +1,8 @@
+{
+  "name": "Freiwild Spotify modded",
+  "short": "Freiwild",
+  "version": "1.0.0",
+  "date": "2026-10-03",
+  "base": "Spicetify CLI",
+  "baseLicense": "LGPL-2.1"
+}
